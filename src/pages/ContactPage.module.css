@@ -1,0 +1,48 @@
+.progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-gold);
+    transform-origin: 0%;
+    z-index: 1001;
+}
+
+.contactSection {
+    min-height: calc(100vh - 80px);
+    padding-top: 140px;
+    padding-bottom: 60px;
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.contactContainer {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contactHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contactHeadline {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #022E69;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+}
+
+.contactSubline {
+    font-size: 1.25rem;
+    color: #4b5563;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}

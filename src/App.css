@@ -1,0 +1,19 @@
+.app-container {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  background-color: #011326;
+  overflow: hidden;
+}
+
+.radial-glow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 150vw;
+  height: 150vh;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(2, 46, 105, 0.2) 0%, rgba(1, 13, 26, 1) 80%);
+  z-index: -1;
+  pointer-events: none;
+}

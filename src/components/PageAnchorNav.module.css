@@ -1,0 +1,141 @@
+.navContainer {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+    pointer-events: none; /* Let scroll/clicks pass through except on active items */
+}
+
+.navItem {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    cursor: pointer;
+    padding: 6px 0;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: auto; /* Re-enable pointer events for hover/click */
+}
+
+.navLabel {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+}
+
+.navDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid;
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* --- LIGHT THEME (Light backgrounds) --- */
+.lightTheme .navLabel {
+    color: #022E69;
+}
+
+.lightTheme .navDot {
+    border-color: rgba(2, 46, 105, 0.4);
+}
+
+/* Light Theme Hover States */
+.lightTheme .navItem:hover .navLabel {
+    opacity: 1;
+    transform: translateX(0);
+    color: #E99235; /* Gold */
+}
+
+.lightTheme .navItem:hover .navDot {
+    border-color: #E99235;
+    background-color: #E99235;
+    transform: scale(1.2);
+}
+
+/* Light Theme Active States */
+.lightTheme .navItem.active .navLabel {
+    opacity: 1;
+    transform: translateX(0);
+    color: #E99235;
+    font-weight: 700;
+}
+
+.lightTheme .navItem.active .navDot {
+    border-color: #E99235;
+    background-color: #E99235;
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(233, 146, 53, 0.2);
+}
+
+
+/* --- DARK THEME (Hero / Dark background) --- */
+.darkTheme .navLabel {
+    color: #ffffff;
+}
+
+.darkTheme .navDot {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Dark Theme Hover States */
+.darkTheme .navItem:hover .navLabel {
+    opacity: 1;
+    transform: translateX(0);
+    color: #E99235; /* Gold */
+}
+
+.darkTheme .navItem:hover .navDot {
+    border-color: #E99235;
+    background-color: #E99235;
+    transform: scale(1.2);
+}
+
+/* Dark Theme Active States */
+.darkTheme .navItem.active .navLabel {
+    opacity: 1;
+    transform: translateX(0);
+    color: #E99235;
+    font-weight: 700;
+}
+
+.darkTheme .navItem.active .navDot {
+    border-color: #E99235;
+    background-color: #E99235;
+    transform: scale(1.2);
+    box-shadow: 0 0 0 4px rgba(233, 146, 53, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .navContainer {
+        right: 15px; /* Closer to the edge to maximize content reading space */
+        gap: 15px;
+    }
+
+    .navItem {
+        gap: 0;
+        padding: 4px 0;
+    }
+
+    .navDot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .navLabel {
+        display: none !important; /* Keep the mobile interface clean and prevent text overlapping content */
+    }
+}

@@ -1,0 +1,351 @@
+.carouselWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    user-select: none;
+}
+
+.carouselHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carouselTitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #022E69; /* matching premium branding */
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+:global(.dark-mode) .carouselTitle {
+    color: white;
+}
+
+.navButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.navBtn {
+    background: white;
+    border: 1px solid rgba(2, 46, 105, 0.1);
+    color: #022E69;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navBtn:hover {
+    background: var(--color-gold);
+    color: white;
+    border-color: var(--color-gold);
+    transform: scale(1.05);
+}
+
+.trackContainer {
+    width: 100%;
+    position: relative;
+    height: 600px; /* comfortably holds two 280px cards + gap */
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: grab;
+}
+
+.trackContainer:active {
+    cursor: grabbing;
+}
+
+.cardsStack {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.videoCard {
+    width: 100%;
+    height: calc(50% - 10px); /* split equally minus half the gap */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(2, 46, 105, 0.05);
+    background: #f8f9fa;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.videoCard:hover {
+    box-shadow: 0 12px 30px rgba(2, 46, 105, 0.08);
+}
+
+.thumbnailPlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    cursor: pointer;
+    color: white;
+    overflow: hidden;
+}
+
+.decoHelix {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 60%;
+    height: 140%;
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30,20 Q50,50 70,20 M70,80 Q50,50 30,80' stroke='white' stroke-width='2' fill='none'/%3E%3Ccircle cx='30' cy='20' r='3' fill='white'/%3E%3Ccircle cx='70' cy='20' r='3' fill='white'/%3E%3Ccircle cx='30' cy='80' r='3' fill='white'/%3E%3Ccircle cx='70' cy='80' r='3' fill='white'/%3E%3C/svg%3E");
+    background-size: cover;
+    pointer-events: none;
+    transition: transform 0.5s ease;
+}
+
+.thumbnailPlaceholder:hover .decoHelix {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.playButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 2;
+}
+
+.playButton {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.thumbnailPlaceholder:hover .playButton {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(233, 146, 53, 0.4);
+}
+
+.playText {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+.cardInfo {
+    z-index: 2;
+}
+
+.cardTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    color: white;
+}
+
+.cardDesc {
+    font-size: 0.9rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+}
+
+.embedContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #000;
+}
+
+.iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.closeVideoBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.closeVideoBtn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.indicatorDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(2, 46, 105, 0.1);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.activeDot {
+    background: var(--color-gold);
+    width: 24px;
+    border-radius: 4px;
+}
+
+.iframeOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(2, 46, 105, 0.6) 0%, rgba(2, 46, 105, 0.8) 100%);
+    backdrop-filter: blur(2px);
+    cursor: pointer;
+    color: white;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+
+.iframeOverlay:hover {
+    background: linear-gradient(135deg, rgba(2, 46, 105, 0.4) 0%, rgba(2, 46, 105, 0.7) 100%);
+    backdrop-filter: blur(0px);
+}
+
+.iframeOverlay:hover .playButton {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(233, 146, 53, 0.4);
+}
+
+@media (max-width: 768px) {
+    .trackContainer {
+        height: 520px;
+    }
+    
+    .thumbnailPlaceholder {
+        padding: 20px;
+    }
+    
+    .playButton {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modalContent {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 85vh;
+    max-height: 760px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modalCloseBtn {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.8;
+}
+
+.modalCloseBtn:hover {
+    transform: rotate(90deg) scale(1.1);
+    opacity: 1;
+}
+
+.modalIframeContainer {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modalIframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

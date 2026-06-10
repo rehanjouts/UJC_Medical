@@ -1,0 +1,162 @@
+.footerContainer {
+    background: #ffffff;
+    border-top: 1px solid rgba(2, 46, 105, 0.12);
+    padding: 80px 40px 30px;
+    color: #334155;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    z-index: 10;
+}
+
+.footerContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 80px;
+}
+
+.footerColumnLarge {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-gold, #e99235);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.addressesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.subSection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.subHeading {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #0f1b2d;
+}
+
+.text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+.link {
+    color: #334155;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--color-gold, #e99235);
+}
+
+.footerNavigationSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigationGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+}
+
+.gridItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.socialLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #334155;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.socialLink:hover {
+    color: var(--color-gold, #e99235);
+    transform: translateX(3px);
+}
+
+.footerBottom {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    padding-top: 30px;
+    border-top: 1px solid rgba(2, 46, 105, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.desktopOnly {
+    display: block;
+}
+
+.mobileOnly {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .footerContent {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .footerContainer {
+        padding: 60px 20px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .addressesGrid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .navigationGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .desktopOnly {
+        display: none;
+    }
+
+    .mobileOnly {
+        display: block;
+    }
+
+    .mobileHeading {
+        margin-top: 15px;
+    }
+
+    .footerBottom {
+        margin-top: 40px;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
