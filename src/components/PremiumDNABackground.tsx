@@ -18,9 +18,7 @@ const PremiumDNABackground: React.FC = () => {
 
         // Premium abstract DNA structures
         const dnas = [
-            { x: 0.15, y: 0.3, scale: 1.0, speedY: -0.15, phase: 0 },
-            { x: 0.85, y: 0.6, scale: 1.4, speedY: -0.1, phase: Math.PI / 3 },
-            { x: 0.45, y: 0.85, scale: 0.8, speedY: -0.2, phase: Math.PI }
+            { x: 0.85, y: 0.5, scale: 0.6, speedY: -0.1, phase: 0 }
         ];
 
         const resize = () => {

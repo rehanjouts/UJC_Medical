@@ -91,21 +91,6 @@ const HealthcareLoader: React.FC<HealthcareLoaderProps> = ({ onComplete }) => {
                                     }}
                                 />
 
-                                {/* Stethoscope Line Drawing */}
-                                <motion.path
-                                    d="M 60,40 C 60,25 75,15 100,15 C 125,15 140,25 140,40 M 60,40 C 60,55 70,75 90,85 L 90,110 C 90,125 110,125 110,110 L 110,85 C 130,75 140,55 140,40 M 100,15 L 100,5 M 60,40 L 55,40 M 140,40 L 145,40"
-                                    fill="none"
-                                    stroke="rgba(255, 255, 255, 0.7)"
-                                    strokeWidth="2"
-                                    strokeLinecap="round"
-                                    filter="url(#glow)"
-                                    initial={{ pathLength: 0 }}
-                                    animate={{ pathLength: 1 }}
-                                    transition={{
-                                        duration: 1.6,
-                                        ease: "easeOut"
-                                    }}
-                                />
                             </svg>
                             {/* Glowing Pulse Dot that follows the ECG heartbeat path */}
                             <div className={styles.pulseSparkle} />

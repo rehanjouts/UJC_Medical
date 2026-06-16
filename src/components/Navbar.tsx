@@ -85,6 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLoaded, onOpenLegal }) => {
                             <a href="#intro" onClick={(e) => handleScrollTo(e, 'intro')}>Fokus</a>
                             <a href="#services" onClick={(e) => handleScrollTo(e, 'services')}>Leistungen</a>
                             <a href="#process" onClick={(e) => handleScrollTo(e, 'process')}>Prozess</a>
+                            <a href="/unser-team" onClick={(e) => { e.preventDefault(); navigate('/unser-team'); }}>Unser Team</a>
                             <a href="/contact" onClick={(e) => { e.preventDefault(); navigate('/contact'); }}>Kontakt</a>
                         </div>
 
@@ -122,6 +123,7 @@ const Navbar: React.FC<NavbarProps> = ({ isLoaded, onOpenLegal }) => {
                             <a href="#intro" onClick={(e) => handleScrollTo(e, 'intro')}>Fokus</a>
                             <a href="#services" onClick={(e) => handleScrollTo(e, 'services')}>Leistungen</a>
                             <a href="#process" onClick={(e) => handleScrollTo(e, 'process')}>Prozess</a>
+                            <a href="/unser-team" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); navigate('/unser-team'); }}>Unser Team</a>
                             <a href="/contact" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); navigate('/contact'); }}>Kontakt</a>
                             <a href="#impressum" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onOpenLegal('impressum'); }}>Impressum</a>
                             <a href="#datenschutz" onClick={(e) => { e.preventDefault(); setIsMobileMenuOpen(false); onOpenLegal('datenschutz'); }}>Datenschutz</a>

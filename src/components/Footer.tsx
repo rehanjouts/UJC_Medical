@@ -128,9 +128,9 @@ const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                             <h3 className={`${styles.heading} ${styles.socialHeading} ${styles.mobileHeading}`}>SOCIALS</h3>
                         </div>
 
-                        {/* Kontakt & LinkedIn */}
+                        {/* Unser Team & LinkedIn */}
                         <div className={styles.gridItem}>
-                            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate('/contact'); }} className={styles.link}>Kontakt</a>
+                            <a href="/unser-team" onClick={(e) => { e.preventDefault(); navigate('/unser-team'); }} className={styles.link}>Unser Team</a>
                         </div>
                         <div className={styles.gridItem}>
                             <a 
@@ -142,6 +142,14 @@ const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                                 <Linkedin size={20} />
                                 <span>LinkedIn</span>
                             </a>
+                        </div>
+
+                        {/* Kontakt & Spacing */}
+                        <div className={styles.gridItem}>
+                            <a href="/contact" onClick={(e) => { e.preventDefault(); navigate('/contact'); }} className={styles.link}>Kontakt</a>
+                        </div>
+                        <div className={styles.gridItem}>
+                            {/* Empty spacer to align grid */}
                         </div>
                     </div>
                 </motion.div>

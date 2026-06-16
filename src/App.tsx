@@ -18,7 +18,7 @@ import HealthcareBackground from './components/HealthcareBackground';
 import PageAnchorNav from './components/PageAnchorNav';
 import MediaCarousel from './components/MediaCarousel';
 import type { MediaItem } from './components/MediaCarousel';
-import HumanConnectionJourney from './components/HumanConnectionJourney';
+
 // ContactForm is now on its own /contact page
 
 // Global styles
@@ -325,7 +325,7 @@ function App() {
 
                     {/* SECTION 4 — SERVICES */}
                     <section id="services" className={styles.servicesSection}>
-                        <HumanConnectionJourney />
+
                         <div className={styles.container}>
                             <motion.div 
                                 className={styles.sectionHeader}

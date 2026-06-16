@@ -1,0 +1,223 @@
+.teamPageContainer {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ffffff;
+    color: #022E69;
+    overflow: hidden;
+    padding: 120px 0 80px 0;
+    z-index: 1;
+}
+
+.glowBg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background: radial-gradient(circle at center, rgba(233, 146, 53, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heroSection {
+    position: relative;
+    z-index: 2;
+    padding: 20px 0 40px 0;
+    text-align: center;
+}
+
+.headerContainer {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.headerContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(233, 146, 53, 0.1);
+    color: #e99235;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.pageTitle {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: #022E69;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pageSubtitle {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: #666666;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.teamSection {
+    padding: 60px 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.sectionContainer {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sectionHeader {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    color: #022E69;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.titleDivider {
+    width: 60px;
+    height: 4px;
+    background-color: #E99235;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+.teamGrid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.memberCard {
+    background: rgba(2, 46, 105, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(2, 46, 105, 0.08);
+    border-radius: 15px;
+    padding: 35px 25px;
+    width: calc(25% - 22.5px);
+    max-width: 300px;
+    min-width: 260px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: default;
+}
+
+.memberCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(2, 46, 105, 0.1);
+    border-color: #E99235;
+}
+
+.photoPlaceholder {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(233, 146, 53, 0.15), rgba(2, 46, 105, 0.15));
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(2, 46, 105, 0.08);
+    overflow: hidden;
+    transition: border-color 0.4s ease, transform 0.4s ease;
+}
+
+.memberCard:hover .photoPlaceholder {
+    border-color: #E99235;
+    transform: scale(1.05);
+}
+
+.memberPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 1.35rem;
+    color: #022E69;
+    font-weight: 600;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.role {
+    font-size: 0.85rem;
+    color: #E99235;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+    .memberCard {
+        width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .teamPageContainer {
+        padding-top: 100px;
+    }
+
+    .memberCard {
+        width: calc(50% - 15px);
+    }
+
+    .pageTitle {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .memberCard {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .pageTitle {
+        font-size: 2.2rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.8rem;
+    }
+
+    .heroSection {
+        padding: 40px 0 20px 0;
+    }
+
+    .teamSection {
+        padding: 30px 0 20px;
+    }
+}
