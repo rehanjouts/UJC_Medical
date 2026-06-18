@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import LegalModal from '../components/LegalModal';
-import NetworkBackground from '../components/NetworkBackground';
+
 import styles from './TeamPage.module.css';
 
 interface TeamMember {
@@ -85,7 +85,7 @@ function TeamPage() {
 
     return (
         <div className={`app-container ${styles.teamPageContainer}`}>
-            <NetworkBackground explodeOnMount={true} />
+
             <div className={styles.glowBg}></div>
 
             {/* Navbar */}
