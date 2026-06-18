@@ -37,7 +37,7 @@ const indiaTeam: TeamMember[] = [
     { name: 'Goodwin Joy', position: 'Marketing Manager', photo: '/Team photos/Team India/Goodwin.png' },
     { name: 'Neenu Anson', position: 'German Teacher', photo: '/Team photos/Team India/Neenu.png' },
     { name: 'Akhila Manoj', position: 'German Teacher', photo: '/Team photos/Team India/Akhila.png' },
-    { name: 'Jyothi', position: 'German Teacher', photo: '/Team photos/Team India/Jyothi.png' }
+    { name: 'Jyothi Lakshmi S', position: 'German Teacher', photo: '/Team photos/Team India/Jyothi.png' }
 ];
 
 const containerVariants = {

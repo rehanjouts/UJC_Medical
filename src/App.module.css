@@ -630,6 +630,7 @@
 .ctaContent {
     max-width: 900px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .ctaHeadline {
@@ -638,13 +639,15 @@
     margin-bottom: 30px;
     line-height: 1.1;
     letter-spacing: -0.03em;
+    white-space: nowrap;
 }
 
 .ctaText {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: #334155;
     margin-bottom: 20px;
     line-height: 1.6;
+    text-align: center;
 }
 
 .ctaButtons {

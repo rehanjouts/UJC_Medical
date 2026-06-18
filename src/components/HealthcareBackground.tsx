@@ -108,7 +108,7 @@ const HealthcareBackground: React.FC<HealthcareBackgroundProps> = ({ explodeOnMo
 
         const init = (forceExplode: boolean = false) => {
             const isMobile = window.innerWidth < 768;
-            const count = isMobile ? 15 : 35;
+            const count = isMobile ? 5 : 12;
             particles = [];
             for (let i = 0; i < count; i++) {
                 particles.push(new Particle(forceExplode));

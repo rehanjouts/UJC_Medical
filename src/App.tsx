@@ -10,7 +10,6 @@ import LegalModal from './components/LegalModal';
 import HealthcareLoader from './components/HealthcareLoader';
 
 // Backgrounds & Canvas Animations
-import PremiumDNABackground from './components/PremiumDNABackground';
 import ECGBackground from './components/ECGBackground';
 import HealthcareBackground from './components/HealthcareBackground';
 
@@ -170,7 +169,6 @@ function App() {
 
             {isLoaded && (
                 <>
-                    <PremiumDNABackground />
                     
                     {/* Top Progress bar */}
                     <motion.div className={styles.progressBar} style={{ scaleX }} />
@@ -253,9 +251,9 @@ function App() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                             >
-                                <h2 className={styles.sectionTitle}>Echte Einblicke statt<br />leere Versprechen</h2>
+                                <h2 className={styles.sectionTitle}>Einblicke in unsere Arbeit<br /></h2>
                                 <p className={styles.sectionSubline}>
-                                    Unsere Arbeit zeigt sich in realen Prozessen, echten Menschen und konkreten Einblicken.
+                                    lentdecken Sie unsere Videos.
                                 </p>
                             </motion.div>
 
@@ -546,10 +544,10 @@ function App() {
                             >
                                 <h2 className={styles.ctaHeadline}>Healthcare-Personal, das passt.<br />Prozesse, die tragen.</h2>
                                 <p className={styles.ctaText}>
-                                    Ob Pflegefachkräfte, medizinisches Personal oder ärztliche Positionen: UJC unterstützt Sie bei der nachhaltigen Besetzung Ihrer Vakanzen – regional, national und international.
+                                    Wir besetzen Schlüsselpositionen dort, wo sie Qualität, Stabilität und Verantwortung sichern.
                                 </p>
                                 <p className={styles.ctaText}>
-                                    Lassen Sie uns über Ihren Personalbedarf sprechen und gemeinsam die passende Lösung für Ihre Einrichtung entwickeln.
+                                    Ob Pflegefachkräfte, medizinisches Personal oder ärztliche Positionen: UJC unterstützt Sie bei der nachhaltigen Besetzung Ihrer Vakanzen – regional, national und international.<br /> Lassen Sie uns über Ihren Personalbedarf sprechen und gemeinsam die passende Lösung für Ihre Einrichtung entwickeln.
                                 </p>
                                 <div className={styles.ctaButtons}>
                                     <button className={styles.primaryBtn} onClick={() => navigate('/contact')}>Jetzt Kontakt aufnehmen</button>
