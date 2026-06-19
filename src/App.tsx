@@ -11,7 +11,7 @@ import HealthcareLoader from './components/HealthcareLoader';
 
 // Backgrounds & Canvas Animations
 import ECGBackground from './components/ECGBackground';
-import HealthcareBackground from './components/HealthcareBackground';
+
 
 // UI components
 import PageAnchorNav from './components/PageAnchorNav';
@@ -377,7 +377,6 @@ function App() {
 
                     {/* SECTION 5 — INTERNATIONAL RECRUITING */}
                     <section id="international" className={styles.internationalSection}>
-                        <HealthcareBackground explodeOnMount={false} />
                         <div className={styles.container}>
                             <div className={styles.splitLayout}>
                                 <motion.div 
